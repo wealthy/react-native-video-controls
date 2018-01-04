@@ -439,6 +439,10 @@ export default class VideoPlayer extends Component {
         else {
             console.warn( 'Warning: _onBack requires navigator property to function. Either modify the onBack prop or pass a navigator prop' );
         }
+        
+        if (this.props.goBack) {
+            this.props.goBack();
+        }
     }
 
     /**
@@ -1288,9 +1292,9 @@ const styles = {
         circle: {
             borderRadius: 12,
             position: 'relative',
-            top: 8, left: 8,
-            height: 12,
-            width: 12,
+            top: 2, left: 8,
+            height: 25,
+            width: 25,
         },
     })
 };
